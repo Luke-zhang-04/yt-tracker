@@ -4,10 +4,15 @@
   "description": "",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "npx tsc -p . && npx webpack && npx babel dist/tracker.js -o dist/tracker.js",
-    "build:dev": "npx tsc -p . --target ES6 && npx webpack --mode none",
+    "build": "yarn tsc && npx webpack && yarn babel && yarn sass:min",
+    "build:dev": "yarn tsc:dev && npx webpack --mode none && yarn run sass",
     "lint": "npx eslint \"*/**/*.ts\"",
-    "lint:fix": "npx eslint \"*/**/*.ts\" --fix"
+    "lint:fix": "npx eslint \"*/**/*.ts\" --fix",
+    "sass": "npx sass ui/scss:ui/css",
+    "sass:min": "npx sass ui/scss:ui/css --style compressed",
+    "tsc": "npx tsc -p . && npx tsc -p tsconfig.ui.json",
+    "tsc:dev": "npx tsc -p . --target ES6 && npx tsc -p tsconfig.ui.json --target ES6",
+    "babel": "npx babel dist/tracker.js -o dist/tracker.js && npx babel ui/js/script.js -o ui/js/script.js"
   },
   "keywords": [],
   "author": "",
