@@ -69,6 +69,7 @@ const getDuration = (timestamp?: string | null): number | undefined => {
     }
 
 /* eslint-disable @typescript-eslint/no-unsafe-call */
+// Site is youtube
 if (window.location.href.includes("youtube")) {
     setInterval(main, DatePlus.secsToMs(1))
 }
