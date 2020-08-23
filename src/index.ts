@@ -74,5 +74,3 @@ if (window.location.href.includes("youtube")) {
     setInterval(main, DatePlus.secsToMs(1))
 }
 /* eslint-enable @typescript-eslint/no-unsafe-call */
-
-

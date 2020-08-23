@@ -31,6 +31,7 @@
     "webpack-cli": "^3.3.12"
   },
   "dependencies": {
-    "@luke-zhang-04/dateplus": "^2.0.3"
+    "@luke-zhang-04/dateplus": "^2.0.3",
+    "yarn": "^1.22.4"
   }
 }
