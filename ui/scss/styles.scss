@@ -12,6 +12,11 @@ body {
   color: $dark;
   overflow: hidden !important;
 }
+
+html{
+  min-width: 40rem;
+  min-height: 30rem;
+}
   
 html,
 body {

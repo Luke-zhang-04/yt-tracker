@@ -11,3 +11,5 @@
 # Make sure scss counts as css
 *.scss linguist-language=CSS
 *.sass linguist-language=CSS
+
+ui/**/*.js linguist-generated=true
