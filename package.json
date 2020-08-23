@@ -1,0 +1,36 @@
+{
+  "name": "ignitionhacks",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "npx tsc -p . && npx webpack && npx babel dist/tracker.js -o dist/tracker.js",
+    "build:dev": "npx tsc -p . --target ES6 && npx webpack --mode none",
+    "lint": "npx eslint \"*/**/*.ts\"",
+    "lint:fix": "npx eslint \"*/**/*.ts\" --fix"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/cli": "^7.10.5",
+    "@babel/core": "^7.11.4",
+    "@babel/preset-env": "^7.11.0",
+    "@typescript-eslint/eslint-plugin": "^3.9.1",
+    "@typescript-eslint/parser": "^3.9.1",
+    "babel-plugin-loop-optimizer": "^1.4.1",
+    "babel-plugin-minify-constant-folding": "^0.5.0",
+    "babel-plugin-minify-dead-code-elimination": "^0.5.1",
+    "babel-plugin-transform-merge-sibling-variables": "^6.9.4",
+    "babel-plugin-transform-minify-booleans": "^6.9.4",
+    "eslint": "^7.7.0",
+    "eslint-config-recommended": "^4.1.0",
+    "eslint-plugin-prefer-arrow": "^1.2.2",
+    "typescript": "^4.0.2",
+    "webpack": "^4.44.1",
+    "webpack-cli": "^3.3.12"
+  },
+  "dependencies": {
+    "@luke-zhang-04/dateplus": "^2.0.3"
+  }
+}
