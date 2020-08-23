@@ -16,6 +16,7 @@
     "@babel/cli": "^7.10.5",
     "@babel/core": "^7.11.4",
     "@babel/preset-env": "^7.11.0",
+    "@types/chrome": "^0.0.122",
     "@typescript-eslint/eslint-plugin": "^3.9.1",
     "@typescript-eslint/parser": "^3.9.1",
     "babel-plugin-loop-optimizer": "^1.4.1",
@@ -31,6 +32,8 @@
     "webpack-cli": "^3.3.12"
   },
   "dependencies": {
-    "@luke-zhang-04/dateplus": "^2.0.3"
+    "@luke-zhang-04/dateplus": "^2.0.3",
+    "bootstrap": "^5.0.0-alpha1",
+    "destagnate": "^1.6.1"
   }
 }
