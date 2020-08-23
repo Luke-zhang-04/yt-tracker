@@ -5,7 +5,7 @@
     "manifest_version": 2,
     "permissions": ["storage"],
     "background": {
-        "scripts": ["dist/tracker.js"],
+        "scripts": ["src/index.ts"],
         "persistent": false
     }
 }
