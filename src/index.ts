@@ -9,7 +9,10 @@
 import YoutubeTracker from "./youtubeTracker"
 
 chrome.runtime.onInstalled.addListener((): void => {
-    chrome.storage.sync.set({ytTime: 0})
+    chrome.storage.sync.set({
+        ytTime: 0,
+        lastUsed: new Date().getDate()
+    })
 })
 
 const ytTracker = new YoutubeTracker()

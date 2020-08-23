@@ -41,7 +41,15 @@ class Dashboard extends DeStagnate<undefined, DashState> {
             null,
             this.state.ytTime === undefined
                 ? "Loading..."
-                : JSON.stringify(DatePlus.msToHrs(this.state.ytTime), null, 2)
+                : JSON.stringify(DatePlus.msToHrs(this.state.ytTime), null, 2),
+            createElement(
+                "button",
+                {
+                    class: "btn btn-primary",
+                    onClick: this._reset
+                },
+                "Reset",
+            )
         )
     )
 
@@ -52,6 +60,16 @@ class Dashboard extends DeStagnate<undefined, DashState> {
     private _setTime = (): void => chrome.storage.sync.get((items) => {
         this.setState({ytTime: Number(items.ytTime)})
     })
+
+    /**
+     * Reset storage values
+     */
+    private _reset = (): void => {
+        chrome.storage.sync.set({
+            ytTime: 0,
+            lastUsed: new Date().getDate()
+        })
+    }
 
 }
 
