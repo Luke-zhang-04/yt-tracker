@@ -1,5 +1,5 @@
 {
-  "name": "ignitionhacks",
+  "name": "yttimetracker",
   "version": "1.0.0",
   "description": "",
   "scripts": {
@@ -41,5 +41,6 @@
     "@luke-zhang-04/dateplus": "^2.0.3",
     "bootstrap": "^5.0.0-alpha1",
     "destagnate": "^1.6.1"
-  }
+  },
+  "private": true
 }

@@ -34,6 +34,14 @@ export default class YoutubeTracker {
     public constructor () {
         chrome.storage.sync.get((items) => {
             this._ytTime = Number(items.ytTime)
+
+            // Reset if days don't match
+            if (new Date().getDate() !== items.lastUsed) {
+                chrome.storage.sync.set({
+                    ytTime: 0,
+                    lastUsed: new Date().getDate()
+                })
+            }
         })
 
         chrome.storage.onChanged.addListener((changes) => {
@@ -48,6 +56,16 @@ export default class YoutubeTracker {
      * @returns void
      */
     public onTabChange = (): void => {
+        chrome.storage.sync.get((items) => {
+            // Reset if days don't match
+            if (new Date().getDate() !== items.lastUsed) {
+                chrome.storage.sync.set({
+                    ytTime: 0,
+                    lastUsed: new Date().getDate()
+                })
+            }
+        })
+
         this._setTime()
 
         // Set an interval to update youtube time
@@ -68,6 +86,10 @@ export default class YoutubeTracker {
         })
     }
 
+    /**
+     * Set the time to the ytTime variable and write to storage
+     * @returns void
+     */
     private _setTime = (): void => {
         chrome.tabs.getSelected((tab): void => {
             if (
