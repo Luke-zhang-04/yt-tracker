@@ -1,3 +1,11 @@
+/**
+ * Youtube tracker
+ * A Chrome extension to track Youtube Time
+ * @copyright 2020 Ethan Lim, Luke Zhang, Victor Feng, Jaden Pereria
+ * @author Luke Zhang luke-zhang-04.github.io/
+ * @license ISC
+ */
+
 import DeStagnate, {createElement} from "destagnate"
 import DatePlus from "@luke-zhang-04/dateplus"
 

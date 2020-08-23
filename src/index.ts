@@ -5,6 +5,7 @@
  * @author Luke Zhang luke-zhang-04.github.io/
  * @license ISC
  */
+
 import YoutubeTracker from "./youtubeTracker"
 
 chrome.runtime.onInstalled.addListener((): void => {
