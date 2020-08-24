@@ -18,3 +18,4 @@ chrome.runtime.onInstalled.addListener((): void => {
 const ytTracker = new YoutubeTracker()
 
 chrome.tabs.onActivated.addListener(ytTracker.onTabChange)
+chrome.tabs.onUpdated.addListener(ytTracker.onTabChange)
